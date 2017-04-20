@@ -1,19 +1,25 @@
 public class Graph() {
-	private int v; // vertex
+	private final int v; // vertex
 	private int e; // edge
 	private int[] s; // set of vertices
-	PriorityQueue<Vertex> v;
+	// PriorityQueue<Vertex> v;
 
-	public Graph() {
+	public Graph(int V) {
+		this.v = v;
+		this.e = 0;
+		for (int v = 0; v < V; v++) {
+            adj[v] = new Bag<Integer>();
+        }
+
 		v = new PriorityQueue<Vertex>(10,new Vertex());
 	}
 
 	public int getVertex() {
-
+		return v;
 	}	
 
 	public int getEdge() {
-
+		return e;
 	}
 
 	public void setVertex() {
