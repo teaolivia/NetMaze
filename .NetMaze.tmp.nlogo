@@ -32,19 +32,19 @@ to create-L
     set xcor start-x
     set ycor start-y
     set shape "square"
-    set color
+    set color pink
   ]
    create-turtles 1 [
     set xcor start-x - 1
     set ycor start-y
     set shape "square"
-    set color white
+    set color yellow
   ]
    create-turtles 1 [
     set xcor start-x - 2
     set ycor start-y
     set shape "square"
-    set color white
+    set color blue
   ]
    create-turtles 1 [
     set xcor start-x
@@ -129,6 +129,7 @@ to draw-path ;; draw desired path
   reset-ticks
   if mouse-down? [
     ask patch mouse-xcor mouse-ycor [
+
       set pcolor green
     ]
   ]

@@ -129,7 +129,9 @@ to draw-path ;; draw desired path
   reset-ticks
   if mouse-down? [
     ask patch mouse-xcor mouse-ycor [
-      set pcolor green
+      if pcolor != green [
+        set pcolor green
+      ]
     ]
   ]
   tick
