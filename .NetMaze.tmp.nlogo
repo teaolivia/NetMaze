@@ -20,6 +20,13 @@ to setup
   set goal-x random max-pxcor
   set goal-y random min-pycor
   create-L
+<<<<<<< HEAD
+  draw-path
+=======
+  set north false
+  set south false
+  set west false
+  set east false
 
 end
 
@@ -29,32 +36,24 @@ to create-L
     set ycor start-y
     set shape "square"
     set color white
-    pen-down
   ]
    create-turtles 1 [
     set xcor start-x - 1
     set ycor start-y
     set shape "square"
-<<<<<<< HEAD
-    set color pink
-=======
     set color white
->>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
-    pen-down
   ]
    create-turtles 1 [
     set xcor start-x - 2
     set ycor start-y
     set shape "square"
-    set color yellow
-    pen-down
+    set color white
   ]
    create-turtles 1 [
     set xcor start-x
     set ycor start-y + 1
     set shape "square"
-    set color blue
-    pen-down
+    set color white
   ]
 end
 
@@ -128,9 +127,6 @@ to go ;; Dijkstra pathfinding algorithm
     fd 1
   ]
 end
-=======
-to setup-move
->>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 
 to draw-path ;; draw desired path
   reset-ticks
@@ -141,6 +137,9 @@ to draw-path ;; draw desired path
   ]
   tick
 end
+=======
+to setup-move
+>>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 
 to generate-path ;; generate path randomly after create path
  ;; ifelse draw-path [
@@ -151,7 +150,6 @@ end
 to setup-graph
 
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 271

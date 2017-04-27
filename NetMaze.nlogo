@@ -20,14 +20,11 @@ to setup
   set goal-x random max-pxcor
   set goal-y random min-pycor
   create-L
-<<<<<<< HEAD
   draw-path
-=======
   set north false
   set south false
   set west false
   set east false
->>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 end
 
 to create-L
@@ -121,7 +118,7 @@ to clear
   clear-all
 end
 
-<<<<<<< HEAD
+
 to go ;; Dijkstra pathfinding algorithm
   ask turtles [
     fd 1
@@ -137,9 +134,6 @@ to draw-path ;; draw desired path
   ]
   tick
 end
-=======
-to setup-move
->>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 
 to generate-path ;; generate path randomly after create path
  ;; ifelse draw-path [
@@ -150,7 +144,6 @@ end
 to setup-graph
 
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 271
