@@ -2,6 +2,8 @@ globals [
   obstacle-color
   space-color
   border-color
+  start-x start-y
+  goal-x goal-y
 ]
 
 breed [ bots bot ]
@@ -11,8 +13,43 @@ breed [ indicators indicator ]
 
 to setup
   clear-all
-  create-turtles 100 [ setxy random-xcor random-ycor ]
   reset-ticks
+  set start-x random min-pxcor
+  set start-y random max-pycor
+  set goal-x random max-pxcor
+  set goal-y random min-pycor
+  create-L
+end
+
+to create-L
+  create-turtles 1 [
+    set xcor start-x
+    set ycor start-y
+    set shape "square"
+    set color white
+    pen-down
+  ]
+   create-turtles 1 [
+    set xcor start-x - 1
+    set ycor start-y
+    set shape "square"
+    set color white
+    pen-down
+  ]
+   create-turtles 1 [
+    set xcor start-x - 2
+    set ycor start-y
+    set shape "square"
+    set color white
+    pen-down
+  ]
+   create-turtles 1 [
+    set xcor start-x
+    set ycor start-y + 1
+    set shape "square"
+    set color white
+    pen-down
+  ]
 end
 
 to clear
@@ -53,23 +90,6 @@ GRAPHICS-WINDOW
 1
 ticks
 30.0
-
-BUTTON
-19
-39
-84
-72
-Kuya
-h
-NIL
-1
-T
-TURTLE
-NIL
-NIL
-NIL
-NIL
-1
 
 BUTTON
 146
@@ -129,6 +149,23 @@ BUTTON
 144
 reset
 NIL
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+55
+62
+118
+95
+NIL
+setup
 NIL
 1
 T
