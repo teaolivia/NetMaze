@@ -4,6 +4,7 @@ globals [
   border-color
   start-x start-y
   goal-x goal-y
+  north south west east
 ]
 
 breed [ bots bot ]
@@ -34,7 +35,11 @@ to create-L
     set xcor start-x - 1
     set ycor start-y
     set shape "square"
+<<<<<<< HEAD
     set color pink
+=======
+    set color white
+>>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
     pen-down
   ]
    create-turtles 1 [
@@ -53,15 +58,79 @@ to create-L
   ]
 end
 
+to rotate
+  let pivot-x [xcor] of turtle 0
+  let pivot-y [ycor] of turtle 0
+  ask turtle 1 [
+    ifelse north = west = east = south or north
+    [
+      setxy pivot-x pivot-y - 1
+      set north false
+      set west true
+    ]
+    [ ifelse west
+      [
+        setxy pivot-x + 1 pivot-y
+        set west false
+        set south true
+      ]
+      [ ifelse south
+        [
+          setxy pivot-x pivot-y + 1
+          set south false
+          set east true
+        ]
+        [ if east
+          [
+            setxy pivot-x - 1 pivot-y
+            set east false
+            set north true
+          ]
+        ]
+      ]
+    ]
+  ]
+  ask turtle 2 [
+    ifelse west
+    [ setxy pivot-x pivot-y - 2 ]
+    [ ifelse south
+      [ setxy pivot-x + 2 pivot-y ]
+      [ ifelse east
+        [ setxy pivot-x pivot-y + 2 ]
+        [ if north
+          [ setxy pivot-x - 2 pivot-y ]
+        ]
+      ]
+    ]
+  ]
+  ask turtle 3 [
+    ifelse west
+    [ setxy pivot-x - 1 pivot-y ]
+    [ ifelse south
+      [ setxy pivot-x pivot-y - 1 ]
+      [ ifelse east
+        [ setxy pivot-x + 1 pivot-y ]
+        [ if north
+          [ setxy pivot-x pivot-y + 1 ]
+        ]
+      ]
+    ]
+  ]
+end
+
 to clear
   clear-all
 end
 
+<<<<<<< HEAD
 to go ;; Dijkstra pathfinding algorithm
   ask turtles [
     fd 1
   ]
 end
+=======
+to setup-move
+>>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 
 to draw-path ;; draw desired path
   reset-ticks
@@ -112,10 +181,44 @@ ticks
 30.0
 
 BUTTON
-111
-346
-174
-379
+146
+46
+209
+79
+start
+NIL
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+150
+117
+213
+150
+stop
+NIL
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+148
+193
+211
+226
 GO!
 NIL
 NIL
@@ -129,10 +232,10 @@ NIL
 1
 
 BUTTON
-103
-120
-166
-153
+22
+111
+85
+144
 reset
 NIL
 NIL
@@ -146,10 +249,10 @@ NIL
 1
 
 BUTTON
-106
-64
-169
-97
+55
+62
+118
+95
 NIL
 setup
 NIL
@@ -163,12 +266,12 @@ NIL
 1
 
 BUTTON
-108
-189
-177
-222
-rotate
+73
+208
+139
+241
 NIL
+rotate
 NIL
 1
 T
@@ -211,7 +314,7 @@ A pathfinding simulation.
 
 ## THINGS TO NOTICE
 
-Hit the desired button! <3
+(suggested things for the user to notice while running the model)
 
 ## THINGS TO TRY
 
