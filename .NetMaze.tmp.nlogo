@@ -113,6 +113,40 @@ to rotate
   ]
 end
 
+to step-right
+  ask turtles [
+    set xcor xcor + 1
+  ]
+end
+
+to step-left
+  ask turtles [
+    set xcor xcor - 1
+  ]
+end
+
+to step-up
+  ask turtles [
+    set ycor ycor + 1
+  ]
+end
+
+
+to step-down
+  ask turtles [
+    set ycor ycor - 1
+=======
+to draw-path ;; draw desired path
+  reset-ticks
+  if mouse-down? [
+    ask patch mouse-xcor mouse-ycor [
+      if pcolor != green [
+        set pcolor green
+      ]
+    ]
+>>>>>>> ae66bff35aa3871eb15f7e95609f90d467732b96
+  ]
+end
 
 to clear
   clear-all

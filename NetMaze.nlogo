@@ -137,6 +137,17 @@ to step-down
   ]
 end
 
+to draw-path ;; draw desired path
+  reset-ticks
+  if mouse-down? [
+    ask patch mouse-xcor mouse-ycor [
+      if pcolor != green [
+        set pcolor green
+      ]
+    ]
+  ]
+end
+
 to clear
   clear-all
 end
