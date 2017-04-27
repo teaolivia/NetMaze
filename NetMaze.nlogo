@@ -32,19 +32,19 @@ to create-L
     set xcor start-x
     set ycor start-y
     set shape "square"
-    set color white
+    set color pink
   ]
    create-turtles 1 [
     set xcor start-x - 1
     set ycor start-y
     set shape "square"
-    set color white
+    set color yellow
   ]
    create-turtles 1 [
     set xcor start-x - 2
     set ycor start-y
     set shape "square"
-    set color white
+    set color blue
   ]
    create-turtles 1 [
     set xcor start-x
@@ -173,44 +173,10 @@ ticks
 30.0
 
 BUTTON
-146
-46
-209
-79
-start
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-150
-117
-213
-150
-stop
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-148
-193
-211
-226
+72
+302
+135
+335
 GO!
 NIL
 NIL
@@ -224,10 +190,10 @@ NIL
 1
 
 BUTTON
-22
-111
-85
-144
+55
+63
+118
+96
 reset
 NIL
 NIL
@@ -241,10 +207,10 @@ NIL
 1
 
 BUTTON
-55
-62
-118
-95
+87
+30
+150
+63
 NIL
 setup
 NIL
@@ -275,10 +241,10 @@ NIL
 1
 
 BUTTON
-109
-263
-202
-296
+118
+63
+211
+96
 Draw Path
 draw-path
 NIL

@@ -20,14 +20,11 @@ to setup
   set goal-x random max-pxcor
   set goal-y random min-pycor
   create-L
-<<<<<<< HEAD
   draw-path
-=======
   set north false
   set south false
   set west false
   set east false
-
 end
 
 to create-L
@@ -35,7 +32,7 @@ to create-L
     set xcor start-x
     set ycor start-y
     set shape "square"
-    set color white
+    set color
   ]
    create-turtles 1 [
     set xcor start-x - 1
@@ -121,7 +118,7 @@ to clear
   clear-all
 end
 
-<<<<<<< HEAD
+
 to go ;; Dijkstra pathfinding algorithm
   ask turtles [
     fd 1
@@ -137,9 +134,6 @@ to draw-path ;; draw desired path
   ]
   tick
 end
-=======
-to setup-move
->>>>>>> 66a5c80a27e9bd44ceb88a6521d4da812025b33c
 
 to generate-path ;; generate path randomly after create path
  ;; ifelse draw-path [
@@ -179,44 +173,10 @@ ticks
 30.0
 
 BUTTON
-146
-46
-209
-79
-start
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-150
-117
-213
-150
-stop
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-148
-193
-211
-226
+72
+302
+135
+335
 GO!
 NIL
 NIL
@@ -230,10 +190,10 @@ NIL
 1
 
 BUTTON
-22
-111
-85
-144
+55
+63
+118
+96
 reset
 NIL
 NIL
@@ -247,10 +207,10 @@ NIL
 1
 
 BUTTON
-55
-62
-118
-95
+87
+30
+150
+63
 NIL
 setup
 NIL
@@ -281,10 +241,10 @@ NIL
 1
 
 BUTTON
-109
-263
-202
-296
+118
+63
+211
+96
 Draw Path
 draw-path
 NIL
