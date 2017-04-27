@@ -14,8 +14,8 @@ breed [ indicators indicator ]
 to setup
   clear-all
   reset-ticks
-  set start-x random min-pxcor
-  set start-y random max-pycor
+  set start-x random min-pxcor + 3
+  set start-y random max-pycor - 3
   set goal-x random max-pxcor
   set goal-y random min-pycor
   create-L
@@ -33,21 +33,21 @@ to create-L
     set xcor start-x - 1
     set ycor start-y
     set shape "square"
-    set color white
+    set color pink
     pen-down
   ]
    create-turtles 1 [
     set xcor start-x - 2
     set ycor start-y
     set shape "square"
-    set color white
+    set color yellow
     pen-down
   ]
    create-turtles 1 [
     set xcor start-x
     set ycor start-y + 1
     set shape "square"
-    set color white
+    set color blue
     pen-down
   ]
 end
@@ -56,7 +56,7 @@ to clear
   clear-all
 end
 
-to setup-move
+to go
 
 end
 
@@ -92,44 +92,10 @@ ticks
 30.0
 
 BUTTON
-146
-46
-209
-79
-start
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-150
-117
-213
-150
-stop
-NIL
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-148
-193
-211
-226
+111
+346
+174
+379
 GO!
 NIL
 NIL
@@ -143,10 +109,10 @@ NIL
 1
 
 BUTTON
-22
-111
-85
-144
+103
+120
+166
+153
 reset
 NIL
 NIL
@@ -160,12 +126,29 @@ NIL
 1
 
 BUTTON
-55
-62
-118
-95
+106
+64
+169
+97
 NIL
 setup
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+108
+189
+177
+222
+rotate
+NIL
 NIL
 1
 T
@@ -191,7 +174,7 @@ A pathfinding simulation.
 
 ## THINGS TO NOTICE
 
-(suggested things for the user to notice while running the model)
+Hit the desired button! <3
 
 ## THINGS TO TRY
 
